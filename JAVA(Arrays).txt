@@ -1,0 +1,1036 @@
+Arrays:
+
+------------------------------------------------------------------------------------------------------------------------
+
+TO USE Arrays.toString instead of loop.
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		int arr[]= {1,3,66,77};
+		int arr1[]=arr;
+		arr1[0]=100;
+		System.out.println(arr[0]);
+		System.out.println(Arrays.toString(arr));
+		
+		
+}
+}
+
+output:
+
+[100, 3, 66, 77]
+
+---------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		int arr[]= {1,3,66,77};
+		int arr1[]=Arrays.copyOf(arr,arr.length);
+		arr1[0]=67;
+		System.out.println(Arrays.toString(arr1));
+		System.out.println(Arrays.toString(arr));
+		
+		
+}
+}
+
+
+output:
+
+[67, 3, 66, 77]
+[1, 3, 66, 77]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		int arr[]= {1,3,66,77};
+		int arr1[]=Arrays.copyOfRange(arr,1,4);
+		arr1[0]=67;
+		System.out.println(Arrays.toString(arr1));
+		System.out.println(Arrays.toString(arr));
+		
+		
+}
+}
+
+
+output:
+
+[67, 66, 77]
+[1, 3, 66, 77]
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		int arr[]= {1,66,3,77};
+		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
+		
+		
+}
+}
+
+output:
+
+[1, 3, 66, 77]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		int arr[]= {1,66,3,77};
+	    Arrays.sort(arr);
+	    for(int i=0;i<arr.length/2;i++)
+	    {
+	    	int t=arr[i];
+	    	arr[i]=arr[arr.length-i-1];
+	    	arr[arr.length-i-1]=t;
+	    }
+		System.out.println(Arrays.toString(arr));
+		
+		
+}
+}
+
+output:
+
+[77, 66, 3, 1]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		int arr[]=new int[6];
+		Arrays.fill(arr, 1);
+		System.out.println(Arrays.toString(arr));
+}
+}
+
+
+
+output:
+
+[1, 1, 1, 1, 1, 1]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		
+		int arr[]= {1,2,3,4,5,6};
+		int x=5;
+		System.out.print(Arrays.binarySearch(arr, x));
+		
+}
+}
+
+
+output:
+
+4 ----->returns index value
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		
+		int arr[]= {1,2,3,4,5,10,15};
+		int x=9;
+		System.out.print(Arrays.binarySearch(arr, x));
+		
+}
+}
+
+output:
+
+-6------>it shows in which index it should be inserted.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		
+		int n;
+		Scanner S=new Scanner(System.in);
+		n=S.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=S.nextInt();
+		}
+		int sum=0;
+		for(int j=0;j<n;j++)
+			
+		{
+			
+		  if(arr[j]%2==0)
+		  {
+			  sum=sum+arr[j];
+		  }
+		}
+		System.out.println(sum);
+}
+}
+
+output:
+
+n=5
+1
+2
+3
+4
+5
+sum of even numbs=6
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		
+		int n;
+		Scanner S=new Scanner(System.in);
+		n=S.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=S.nextInt();
+		}
+		
+		for(int i=0;i<n;i++)
+		{    
+			int sum=0;
+			sum=sum+arr[i]+arr[n-i-1];
+			System.out.print(sum+" ");
+		}
+		
+		
+}
+}
+
+output:
+n=6
+7
+6
+9
+8
+4
+2
+sum=[9 10 17 17 10 9]
+ 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+public class class18 {
+
+	public static void main(String[] args) {
+		
+		int n;
+		
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter the size of array");
+		n=S.nextInt();
+		
+		int arr[]=new int[n];
+		System.out.println("enter "+n+" numbers");
+	  for(int i=0;i<n;i++)
+	  {
+		  arr[i]=S.nextInt();
+	  }
+	  System.out.println("enter the sum number");
+	  int x=S.nextInt();
+	  System.out.println("the indexes are");
+	  for(int i=0;i<n;i++)
+	  {
+		  for(int j=i+1;j<n;j++)
+		  {
+			  if(arr[i]+arr[j]==x)
+			  {
+				System.out.print(i);
+				System.out.print(" ");
+				System.out.print(j);
+			  }
+		  }
+	  }
+	  
+		
+			
+		
+
+		
+		
+}
+}
+
+output:
+
+enter the size of array
+5
+enter 5 numbers
+1
+2
+33
+5
+4
+enter the sum number
+37
+the indexes are
+2 4
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+public class Arrays2D {
+
+	public static void main(String[] args) {
+	  Scanner s=new Scanner(System.in);
+	  
+	  int c=0;
+	  int n=s.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=s.nextInt();
+			if(arr[i]%2==0)
+			{
+			c++;
+			}
+		}
+		int arr2[]=new int[c];
+		int k=0;
+		for(int i=0;i<n;i++)
+		{
+			if(arr[i]%2==0)
+			{
+				arr2[k++]=arr[i];
+			}
+		}
+		Arrays.sort(arr2);
+		for(int i=0;i<c;i++)
+		{
+			System.out.print(arr2[i]+" ");
+		}
+		
+	
+
+	}
+
+}
+
+output:
+
+5------>size
+8
+6
+5
+2
+1
+2 6 8 ----->no.of even elements in array in sorted order
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+a-b+c/(d*e) ------>infix
+
+ab-cde*/+ ------->postfix
++-ab/c*de ------->prefix
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package sample01;
+import java.util.*;
+
+public class Arrays2D {
+	public static void main(String args[])
+	{
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter no.of rows");
+		int n=S.nextInt();
+		System.out.println("enter no.of colums");
+		int m=S.nextInt();
+		int arr[][]=new int[n][m];
+		System.out.println("enter the elements");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				arr[i][j]=S.nextInt();
+			}
+		}
+		System.out.println("the matrix is");
+		
+	 for(int i=0;i<n;i++)
+	 {
+		 for(int j=0;j<m;j++)
+		 {
+			 System.out.print(arr[i][j]+" ");
+		 }
+		 System.out.println();
+	 }
+		
+	}
+	
+
+}
+
+
+output:
+
+enter no.of rows
+3
+enter no.of colums
+3
+enter the elements
+1
+2
+3
+4
+5
+6
+7
+8
+9
+the matrix is
+1 2 3 
+4 5 6 
+7 8 9 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+
+public class Arrays2D {
+	public static void main(String args[])
+	{
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter no.of rows");
+		int n=S.nextInt();
+		System.out.println("enter no.of columns");
+		int m=S.nextInt();
+		int arr[][]=new int[n][m];
+		System.out.println("enter the elements");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				arr[i][j]=S.nextInt();
+			}
+		}
+		System.out.println("the matrix is");
+		
+	 for(int i=0;i<n;i++)
+	 {
+		 for(int j=0;j<m;j++)
+		 {
+			 System.out.print(arr[i][j]+" ");
+		 }
+		 System.out.println();
+	 }
+	 
+	 for(int i=0;i<n;i++)
+	 {
+		 int c=0;
+		 int x=0;
+		 for(int j=0;j<m;j++)
+		 {
+			 if(arr[i][j]%2==0)
+			 {
+				 c++;
+			 }
+			 else
+			 {
+				 x++;
+			 }
+			 
+		 }
+		 System.out.println("even= "+c+" odd= "+x);
+		 
+	 }
+	 
+		
+	}
+	
+
+}
+
+output:
+
+enter no.of rows
+5
+enter no.of columns
+5
+enter the elements
+1
+3
+2
+4
+2
+2
+3
+5
+8
+9
+0
+3
+4
+1
+4
+8
+3
+5
+2
+8
+6
+3
+4
+8
+0
+the matrix is
+1 3 2 4 2 
+2 3 5 8 9 
+0 3 4 1 4 
+8 3 5 2 8 
+6 3 4 8 0 
+even= 3 odd= 2
+even= 2 odd= 3
+even= 3 odd= 2
+even= 3 odd= 2
+even= 4 odd= 1
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+
+public class Arrays2D {
+	public static void main(String args[])
+	{
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter no.of rows");
+		int n=S.nextInt();
+		System.out.println("enter no.of columns");
+		int m=S.nextInt();
+		int arr[][]=new int[n][m];
+		System.out.println("enter the elements");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				arr[i][j]=S.nextInt();
+			}
+		}
+		System.out.println("the matrix is");
+		
+	 for(int i=0;i<n;i++)
+	 {
+		 for(int j=0;j<m;j++)
+		 {
+			 System.out.print(arr[i][j]+" ");
+		 }
+		 System.out.println();
+	 }
+	 
+	 for(int i=0;i<n;i++)
+	 {
+		 int sum=0;
+		 for(int j=0;j<m;j++)
+		 {
+			 sum=sum+arr[j][i];
+		 }
+		 System.out.println("sum is "+sum);
+			
+	 }
+	 
+		
+	}
+	
+
+}
+
+
+output:
+(column sum)
+
+enter no.of rows
+3
+enter no.of columns
+3
+enter the elements
+1
+2
+3
+1
+1
+1
+4
+4
+4
+the matrix is
+1 2 3 
+1 1 1 
+4 4 4 
+sum is 6
+sum is 7
+sum is 8
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+
+public class Arrays2D {
+	public static void main(String args[])
+	{
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter no.of rows");
+		int n=S.nextInt();
+		System.out.println("enter no.of columns");
+		int m=S.nextInt();
+		int arr[][]=new int[n][m];
+		System.out.println("enter the elements");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				arr[i][j]=S.nextInt();
+			}
+		}
+		System.out.println("the matrix is");
+		
+	 for(int i=0;i<n;i++)
+	 {
+		 for(int j=0;j<m;j++)
+		 {
+			 System.out.print(arr[i][j]+" ");
+		 }
+		 System.out.println();
+	 }
+	 System.out.println("the transpose of matrix is ");
+	 
+	 for(int i=0;i<n;i++)
+	 {
+		 
+		 for(int j=0;j<m;j++)
+		 {
+			System.out.print(arr[j][i]+" "); 
+		 }
+		 System.out.println();
+		 
+			
+	 }
+	 
+		
+	}
+	
+
+}
+
+
+output:
+
+enter no.of rows
+3
+enter no.of columns
+3
+enter the elements
+1
+2
+3
+4
+5
+6
+7
+8
+9
+the matrix is
+1 2 3 
+4 5 6 
+7 8 9 
+the transpose of matrix is 
+1 4 7 
+2 5 8 
+3 6 9 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+
+public class Arrays2D {
+	public static void main(String args[])
+	{
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter no.of rows");
+		int n=S.nextInt();
+		System.out.println("enter no.of columns");
+		int m=S.nextInt();
+		int arr[][]=new int[n][m];
+		System.out.println("enter the elements");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				arr[i][j]=S.nextInt();
+			}
+		}
+		System.out.println("the matrix is");
+		
+	 for(int i=0;i<n;i++)
+	 {
+		 for(int j=0;j<m;j++)
+		 {
+			 System.out.print(arr[i][j]+" ");
+		 }
+		 System.out.println();
+	 }
+	 System.out.println("the even numbers in diagonal of matrix is ");
+	 int sum=0;
+	 for(int i=0;i<n;i++)
+	 {
+		 
+		
+				if(arr[i][i]%2==0)
+				{
+					sum=sum+arr[i][i];
+				}
+				
+			
+		}
+		 
+		 
+			
+	 
+	 System.out.println(sum);	 
+	}
+	
+
+}
+
+output:
+
+enter no.of rows
+3
+enter no.of columns
+3
+enter the elements
+2
+2
+2
+2
+2
+2
+2
+2
+2
+the matrix is
+2 2 2 
+2 2 2 
+2 2 2 
+the even numbers in diagonal of matrix is 
+6
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+
+public class Arrays2D {
+	public static void main(String args[])
+	{
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter no.of rows");
+		int n=S.nextInt();
+		System.out.println("enter no.of columns");
+		int m=S.nextInt();
+		int arr[][]=new int[n][m];
+		System.out.println("enter the elements");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				arr[i][j]=S.nextInt();
+			}
+		}
+		System.out.println("the matrix is");
+		
+	 for(int i=0;i<n;i++)
+	 {
+		 for(int j=0;j<m;j++)
+		 {
+			 System.out.print(arr[i][j]+" ");
+		 }
+		 System.out.println();
+	 }
+	 System.out.println("the even numbers in diagonal of matrix is ");
+	 int sum=0;
+	
+	 for(int i=0;i<n;i++)
+	 {
+		 if(arr[i][n-i-1]%2==0)
+		 {
+			 sum=sum+arr[i][n-i-1];
+		 }
+		 
+	 }
+	 
+	 System.out.println(sum);	 
+	}
+	
+
+}
+
+
+output:
+
+enter no.of rows
+3
+enter no.of columns
+3
+enter the elements
+1
+2
+2
+3
+4
+5
+6
+7
+8
+the matrix is
+1 2 2 
+3 4 5 
+6 7 8 
+the even numbers in diagonal of matrix is 
+12 ----------->different diagonal
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+
+import java.util.*;
+
+public class Arrays2D_01 {
+	
+	public static void main(String args[])
+	{
+		
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter no.of rows");
+		int n=S.nextInt();
+		System.out.println("enter no.of columns");
+		int m=S.nextInt();
+		int arr[][]=new int[n][m];
+		System.out.println("enter the elements");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				arr[i][j]=S.nextInt();
+			}
+		}
+		System.out.println("the matrix is");
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+		int sum1=0;
+		int sum2=0;
+		int sum3=0;
+		
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				if(i<j)
+				{
+					sum1=sum1+arr[i][j];
+				}
+				else if(i>j)
+				{
+					sum2=sum2+arr[i][j];
+				}
+				else
+				{
+					sum3=sum3+arr[i][j];
+				}
+			}
+		}
+		System.out.println("the sum of UTE= "+sum1);
+		System.out.println("the sum of LTE= "+sum2);
+		System.out.println("the sum of PDE= "+sum3);
+
+              if(sum1>sum2 && sum1>sum3)
+		{
+			System.out.println("max is "+sum1);
+		}
+		else if(sum2>sum3)
+		{
+			System.out.println("max is "+sum2);
+		}
+		else
+		{
+			System.out.println("max is "+sum3);
+		}
+	}
+
+}
+
+
+output:
+
+enter no.of rows
+3
+enter no.of columns
+3
+enter the elements
+1
+2
+3
+4
+5
+6
+7
+8
+9
+the matrix is
+1 2 3 
+4 5 6 
+7 8 9 
+the sum of UTE= 11
+the sum of LTE= 19
+the sum of PDE= 15
+max is 19
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+
+import java.util.Scanner;
+
+public class Arrays_rotation {
+	public static void main(String args[])
+	{
+	
+	Scanner S=new Scanner(System.in);
+	System.out.println("enter size");
+	int n=S.nextInt();
+	int arr[]=new int[n];
+	System.out.println("enter the elements");
+	for(int i=0;i<n;i++)
+	{
+		
+			arr[i]=S.nextInt();
+		
+	}
+	System.out.println("the matrix is");
+	for(int i=0;i<n;i++)
+	{
+		
+			System.out.print(arr[i]+" ");
+		
+	}
+	System.out.println();
+	System.out.println("after rotation");
+	
+
+	for(int x=0;x<2;x++)
+	{
+	int last=arr[n-1];
+	for(int i=n-1;i>0;i--)
+	{
+		arr[i]=arr[i-1];
+	}
+	
+	arr[0]=last;
+	}
+	for(int i=0;i<n;i++)
+	{
+		System.out.print(arr[i]+" ");
+	}
+
+}
+}
+
+
+output:
+
+enter size
+5
+enter the elements
+1
+2
+3
+4
+5
+the matrix is
+1 2 3 4 5 
+after rotation
+4 5 1 2 3 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

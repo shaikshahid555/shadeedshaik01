@@ -1,0 +1,459 @@
+Strings
+
+
+package sample01;
+import java.util.*;
+
+public class String01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner S=new Scanner(System.in);
+		String str=S.nextLine();
+		System.out.println(str);
+		System.out.println(str.length());
+		System.out.println(str.toUpperCase());
+		System.out.println(str.toLowerCase());
+		System.out.println(str.charAt(0));
+		System.out.println(str.indexOf('l'));
+		System.out.println(str.lastIndexOf('h'));
+		System.out.println(str.replace("h","e"));
+		System.out.println(str);
+		String s1="hello";
+		String s2="HEllo";
+		System.out.println(s1.equals(s2));
+		System.out.println(s1.equalsIgnoreCase(s2));
+		String s3="       hello      ";
+		System.out.println(s3);
+		System.out.println(s3.trim());
+		String s4="1,2,3,4,5";
+		System.out.println(Arrays.toString(s4.split(" ")));
+
+	}
+
+}
+
+
+output:
+
+hello bha
+hello bha
+9
+HELLO BHA
+hello bha
+h
+2
+7
+eello bea
+hello bha
+false
+true
+       hello      
+hello
+[1,2,3,4,5]
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+
+public class String01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringBuilder str = new StringBuilder("hello");
+		System.out.println(str);
+	    System.out.println(str.append(" bhai"));
+	    System.out.println(str);
+	    str.insert(5, " hii");
+	    System.out.println(str);
+	    str.reverse();
+	    System.out.println(str);
+		
+		
+	}
+
+}
+
+output:
+
+hello
+hello bhai
+hello bhai
+hello hii bhai
+iahb iih olleh
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+
+public class String01 {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner S=new Scanner(System.in); 
+		String s=S.nextLine();
+		int l=s.length();
+		
+		String res="";
+		for(int i=0;i<l;i++)
+		{   char ch=s.charAt(i);
+		
+			if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+			{
+				res+=ch;
+			}
+		}
+		System.out.println("the no.of vowels are "+res);
+		
+	}
+
+}
+
+
+output:
+
+
+hello bhai
+the no.of vowels are eoai
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package sample01;
+import java.util.*;
+
+public class String01 {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner S=new Scanner(System.in); 
+		
+		String str=S.nextLine();
+		int l=str.length();
+		int c1=0;
+		int c2=0;
+		int c3=0;
+		for(int i=0;i<l;i++)
+		{
+			char ch=str.charAt(i);
+			if(Character.isUpperCase(ch))
+			{
+				c1++;
+				
+			}
+			else if(Character.isLowerCase(ch))
+			{
+				c2++;
+			}
+			else
+			{
+				c3++;
+			}
+		}
+		System.out.println("uppercase "+c1);
+        System.out.println("lowercase "+c2);
+        System.out.println("special characters are "+c3);
+		}
+
+}
+
+output:
+
+HIIbeoooo327313173**
+uppercase 3
+lowercase 6
+special characters are 11
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+package sample01;
+import java.util.*;
+
+public class String01 {
+
+	public static void main(String[] args) {
+		
+		Scanner S=new Scanner(System.in); 
+		
+        
+        String str=S.nextLine();
+        StringBuilder b=new StringBuilder();
+        int l=str.length();
+        for(int i=0;i<l;i++)
+        {
+        	char ch=str.charAt(i);
+        	if(ch>='a'&& ch<='z')
+        	{
+        	
+        		int pos=ch - 'a'+ 1;
+        		
+        	
+        	if(i!=(l-1))
+        			{
+        		      b.append(pos).append(",");
+        			}
+        	else
+        	{
+        		b.append(pos);
+        	}
+            }
+        }
+        System.out.println(b);
+	}
+
+}
+
+output:
+
+abc
+1,2,3
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package sample01;
+import java.util.*;
+
+public class String01 {
+
+	public static void main(String[] args) {
+		
+		Scanner S=new Scanner(System.in); 
+		
+	String str=S.nextLine();
+	int l=str.length();
+	int c1=0;
+	int c2=0;
+	int c3=0;
+	for(int i=0;i<l;i++)
+	{
+		char ch=str.charAt(i);
+		if(Character.isUpperCase(ch))
+		{
+			c1++;
+		}
+		else if(Character.isLowerCase(ch))
+		{
+			c2++;
+		}
+		else
+		{
+			c3++;
+		}
+		
+	}
+	if(c1>0 && c2>0 && c3>0 && l>=8)
+	{
+		System.out.println("valid");
+	}
+	else
+	{
+		System.out.println("Invalid");
+	}
+	
+	
+	
+	}
+
+}
+
+output:
+
+Hiilow9@
+valid
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package sample01;
+import java.util.*;
+
+public class String02 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		/*int n=s.nextInt();
+		int sum=0;
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=s.nextInt();
+		}
+		System.out.println(Arrays.toString(arr));
+		for(int i=0;i<n-1;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(arr[j]>arr[i])
+				{
+					sum=sum+arr[j];
+					break;
+				}
+			}
+		}
+		System.out.println(sum);*/
+
+		String str=s.nextLine();
+		
+		for(int i=0;i<str.length();i++)
+		{
+			char ch=str.charAt(i);
+			if(ch>=97 && ch<=122)
+			{
+				ch-=3;
+			}
+			System.out.print(ch);
+		}
+		
+		
+
+	}
+
+}
+
+
+output:
+
+khoor
+hello
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package sample01;
+import java.util.*;
+
+public class String02 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		/*int n=s.nextInt();
+		int sum=0;
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=s.nextInt();
+		}
+		System.out.println(Arrays.toString(arr));
+		for(int i=0;i<n-1;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(arr[j]>arr[i])
+				{
+					sum=sum+arr[j];
+					break;
+				}
+			}
+		}
+		System.out.println(sum);*/
+
+		String str=s.nextLine();
+		System.out.print("enter key value ");
+		int key=s.nextInt();
+		
+		for(int i=0;i<str.length();i++)
+		{
+			char ch=str.charAt(i);
+			if(ch>=97 && ch<=122)
+			{
+				ch-=key;
+				if(ch<97)
+				{
+					ch+=26;
+				}
+			}
+			System.out.print(ch);
+		}
+		
+		
+
+	}
+
+}
+
+
+output:
+
+bvec
+enter key value 4
+xray
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.*;
+
+public class String02 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		/*int n=s.nextInt();
+		int sum=0;
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=s.nextInt();
+		}
+		System.out.println(Arrays.toString(arr));
+		for(int i=0;i<n-1;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(arr[j]>arr[i])
+				{
+					sum=sum+arr[j];
+					break;
+				}
+			}
+		}
+		System.out.println(sum);*/
+
+		String str=s.nextLine();
+		System.out.print("enter key value ");
+		int key=s.nextInt();
+		key=key%26;
+		
+		for(int i=0;i<str.length();i++)
+		{
+			char ch=str.charAt(i);
+			if(ch>=97 && ch<=122)
+			{
+				ch-=key;
+				if(ch<97)
+				{
+					
+					System.out.print((char)(ch+26));
+				}
+				else
+				{
+					System.out.print((char)(ch));
+				}
+			}
+			
+		}
+		
+		
+
+	}
+
+}
+
+
+output:
+
+bvec
+enter key value 400
+rlus
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+

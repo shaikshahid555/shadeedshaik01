@@ -1,0 +1,18 @@
+package sample01;
+
+public class class01 {
+
+	public static void main(String[] args) {
+		int a=22,b=3,c;
+		c=a<<b;
+		System.out.print(c);
+	}
+
+}
+
+
+formulae for left shift-->  x<<y
+                            x*(2**y)
+  
+formulae for right shift-->  x>>y
+                             x/(2**y)

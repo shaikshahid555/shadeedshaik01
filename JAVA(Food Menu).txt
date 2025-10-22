@@ -1,0 +1,202 @@
+package sample01;            
+import java.util.Scanner;
+public class claa07 {
+
+	public static void main(String[] args) {
+		Scanner S=new Scanner(System.in);
+		
+		System.out.println("Hi,Please Enter your name!");
+		String s=S.next();
+		System.out.println("hey " +s);
+		System.out.println("MENU");
+		System.out.println("1.Dal Fry=40");
+		System.out.println("2.Paneer Butter Masala=100");
+		System.out.println("3.Chicken Curry=120");
+		System.out.println("4.Fish Curry=100");
+		System.out.println("5.tomato Curry=30");
+		System.out.println("Select From MENU");
+		int n=S.nextInt();
+		int p;
+		switch(n)
+		{
+		case 1:
+			System.out.println("Pay Rs 40 for Dal Fry");
+			p=S.nextInt();
+			if(p==40)
+			{
+              System.out.println("Rs 40 Paid\nkindly wait for your Order");
+			}
+			else
+			{
+				System.out.println("Wrong Payment");
+			}
+			break;
+		case 2:
+			System.out.println("Pay Rs 100 for Paneer Butter Masala");
+			p=S.nextInt();
+			if(p==100)
+			{
+              System.out.println("Rs 100 Paid\nkindly wait for your Order");
+			}
+			else
+			{
+				System.out.println("Wrong Payment");
+			}
+			break;
+			
+		case 3:
+			System.out.println("Pay Rs 120 for Chicken Curry");
+			p=S.nextInt();
+			if(p==120)
+			{
+              System.out.println("Rs 120 Paid\nkindly wait for your Order");
+			}
+			else
+			{
+				System.out.println("Wrong Payment");
+			}
+			break;
+		case 4:
+			System.out.println("Pay Rs 100 for Fish Fry");
+			p=S.nextInt();
+			if(p==100)
+			{
+              System.out.println("Rs 100 Paid\nkindly wait for your Order");
+			}
+			else
+			{
+				System.out.println("Wrong Payment");
+			}
+			break;
+		case 5:
+			System.out.println("Pay Rs 30 for Tomato Curry");
+			p=S.nextInt();
+			if(p==30)
+			{
+              System.out.println("Rs 30 Paid\nkindly wait for your Order");
+			}
+			else
+			{
+				System.out.println("Wrong Payment");
+			}
+			break;
+		default :
+			System.out.print("invalid input");
+			break;
+		}
+		
+		
+		
+	}
+}
+
+
+____________________________________________________________________________________________________________________________________________________________________________________________________
+
+package sample01;
+import java.util.Scanner;    ------------------>FOR SELECTING QUANTITY.
+public class class08 {
+
+	public static void main(String[] args) {
+	
+		
+				Scanner S=new Scanner(System.in);
+				
+				System.out.println("Hi,Please Enter your name!");
+				String s=S.next();
+				System.out.println("hey " +s);
+				System.out.println("MENU");
+				System.out.println("1.Dal Fry=40");
+				System.out.println("2.Paneer Butter Masala=100");
+				System.out.println("3.Chicken Curry=120");
+				System.out.println("4.Fish Curry=100");
+				System.out.println("5.tomato Curry=30");
+				System.out.println("Select From MENU");
+				int n=S.nextInt();
+				int p;
+				switch(n)
+				{
+				case 1:
+					System.out.println("Enter Quantity");
+					p=S.nextInt();
+					
+					System.out.println("your payment amt is "+(p*40));
+					int x=S.nextInt();
+					if(x==p*40)
+					{
+		              System.out.println("Paid "+x+ "\n" +"kindly wait for your Order");
+					}
+					else
+					{
+						System.out.println("Wrong Payment");
+					}
+					break;
+				case 2:
+					
+					System.out.println("Enter Quantity");
+					p=S.nextInt();
+					System.out.println("your payment amt is "+(p*100));
+					int y=S.nextInt();
+					if(y==p*100)
+					{
+		              System.out.println("Paid " +y+ "\n" +"kindly wait for your Order");
+					}
+					else
+					{
+						System.out.println("Wrong Payment");
+					}
+					break;
+					
+				case 3:
+					
+					System.out.println("Enter Quantity");
+					p=S.nextInt();
+					System.out.println("your payment amt is "+(p*120));
+					int z=S.nextInt();
+					if(z==p*120)
+					{
+		              System.out.println("Paid " +z+ "\n" +"kindly wait for your Order");
+					}
+					else
+					{
+						System.out.println("Wrong Payment");
+					}
+					break;
+				case 4:
+					
+					System.out.println("Enter Quantity");
+					p=S.nextInt();
+					System.out.println("your payment amt is "+(p*100));
+					int l=S.nextInt();
+					if(l==p*100)
+					{
+		              System.out.println("Paid " +l+ "\n" +"kindly wait for your Order");
+					}
+					else
+					{
+						System.out.println("Wrong Payment");
+					}
+					break;
+				case 5:
+					
+					System.out.println("Enter Quantity \n");
+					p=S.nextInt();
+					System.out.println("your payment amt is "+(p*30));
+					int t=S.nextInt();
+					if(t==p*30)
+					{
+		              System.out.println("Paid " +t+ "\n" +"kindly wait for your Order");
+					}
+					else
+					{
+						System.out.println("Wrong Payment");
+					}
+					break;
+				default :
+					System.out.println("invalid input");
+					break;
+				}
+			}
+		}
+
+

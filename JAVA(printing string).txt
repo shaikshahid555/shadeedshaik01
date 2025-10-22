@@ -1,0 +1,18 @@
+package sample01;
+import java.util.Scanner;
+
+public class class03 {
+
+	public static void main(String[] args) {
+		Scanner a=new Scanner(System.in);
+		double d;
+		d=a.nextDouble();
+		a.nextLine();
+		String s=a.nextLine();
+		
+		
+		System.out.println(s + d);
+
+	}
+
+}

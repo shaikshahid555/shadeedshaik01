@@ -1,0 +1,599 @@
+package sample01;
+
+public class class9 {
+
+	public static void main(String[] args) {
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<5;j++)
+			{
+				System.out.print("* ");
+				
+			}
+			System.out.print("\n");
+		}
+
+	}
+
+}
+
+
+output:
+
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+
+--------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+
+public class class9 {
+
+	public static void main(String[] args) {
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<i+1;j++)
+			{
+				System.out.print("* ");
+				
+			}
+			System.out.print("\n");
+		}
+
+	}
+
+}
+
+
+output:
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+
+public class class9 {
+
+	public static void main(String[] args) {
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<5-i;j++)
+			{
+				System.out.print("* ");
+				
+			}
+			System.out.print("\n");
+		}
+
+	}
+
+}
+
+output:
+
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+package sample01;
+
+public class class9 {
+
+	public static void main(String[] args) {
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<5-i-1;j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k=0;k<i+1;k++)
+			{
+				System.out.print("* ");
+				
+			}
+			System.out.println();
+			
+		}
+
+	}
+
+}
+
+
+output:
+
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+----------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+
+public class class9 {
+
+	public static void main(String[] args) {
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<i;j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k=0;k<5-i;k++)
+			{
+				System.out.print("* ");
+				
+			}
+			System.out.println();
+			
+		}
+
+	}
+
+}
+
+
+output:
+
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+
+public class class9 {
+
+	public static void main(String[] args) {
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<5-i-1;j++)
+			{
+				System.out.print("_");
+			}
+			for(int k=0;k<i+1;k++)
+			{
+				System.out.print("*");
+				
+				
+			}
+			for(int h=0;h<i;h++)
+			{
+				System.out.print("*");
+			}
+			for(int l=0;l<5-i-1;l++)
+			{
+				
+			
+			System.out.print("_");
+			}
+			System.out.println();
+		}
+			
+			
+		}
+
+	}
+
+
+output:
+
+____*____
+___***___
+__*****__
+_*******_
+*********
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+
+public class class10 {
+
+	public static void main(String[] args) {
+	
+		for(int i=1;i<=5;i++)
+		{
+			double a=Math.pow(10,i);
+			a=(a/9)*i;
+			int b=(int) a;
+			System.out.println(b);
+			
+		    
+		}
+			
+			
+		
+	}
+
+}
+
+
+output:
+
+1
+22
+333
+4444
+55555
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+
+public class class11 {
+
+	public static void main(String[] args) {
+	  for(int i=0;i<5;i++)
+	  {
+		  for(int j=0;j<5;j++)
+		  
+		  {
+			  if(i==0||i==4||j==0||j==4)
+			  {
+				  System.out.print("* ");
+			  }
+			  else
+			  {
+				  System.out.print("  ");
+			  }
+			  
+		  }
+			  
+			System.out.println();  
+		  }
+		  
+	  }
+
+	}
+
+
+output:
+
+* * * * * 
+*       * 
+*       * 
+*       * 
+* * * * * 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+package sample01;
+
+public class class11 {
+
+	public static void main(String[] args) {
+		int c=1;
+	  for(int i=0;i<5;i++)
+	  {
+		  for(int j=0;j<5;j++)
+		  
+		  {
+			  if(i==0||i==4||j==0||j==4)
+			  {
+				  System.out.print("* ");
+			  }
+			  else
+			  {
+				  
+				  System.out.print(c+" ");
+				  c=c+1;
+			  }
+			  
+		  }
+			  
+			System.out.println();  
+		  }
+		  
+	  }
+
+	}
+
+
+output:
+
+* * * * * 
+* 1 2 3 * 
+* 4 5 6 * 
+* 7 8 9 * 
+* * * * * 
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.Scanner;
+public class class12 {
+
+	public static void main(String[] args) {
+		Scanner S=new Scanner(System.in);
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<5-i;j++)
+			{
+				System.out.print("*");
+			}
+			for(int k=0;k<i+1;k++)
+			{  
+				if(k<i) {
+				System.out.print(k+1+" ");
+				}
+				else
+				{
+					System.out.print(k+1);
+				}
+			}
+			for(int f=0;f<5-i;f++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+
+
+OUTPUT:
+
+*****1*****
+****1 2****
+***1 2 3***
+**1 2 3 4**
+*1 2 3 4 5*
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package sample01;
+
+public class class16 {
+
+	public static void main(String[] args) {
+		
+		
+		
+				for(int i=0;i<5;i++)
+				{
+					for(int j=0;j<5-i;j++)
+					{
+						System.out.print("*");
+					}
+					for(int k=0;k<2*i+1;k++)
+					{  
+						System.out.print((char)('a'+k));
+					}
+					for(int f=0;f<5-i;f++)
+					{
+						System.out.print("*");
+					}
+					System.out.println();
+				}
+
+			}
+
+		
+
+
+	}
+
+
+
+output:
+
+*****a*****
+****abc****
+***abcde***
+**abcdefg**
+*abcdefghi*
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+
+public class class16 {
+
+	public static void main(String[] args) {
+		
+		
+		
+				for(int i=0;i<5;i++)
+				{
+					for(int j=0;j<5-i-1;j++)
+					{
+						System.out.print(" ");
+					}
+					for(int k=0;k<i+1;k++)
+					{  
+						System.out.print((char)('a'+k));
+					}
+					for(int x=0;x<i;x++)
+					{
+						System.out.print((char)('a'+(i-1)-x));
+					}
+					for(int f=0;f<5-i-1;f++)
+					{
+						System.out.print(" ");
+					}
+					System.out.println();
+				}
+
+			}
+
+		
+
+
+	}
+
+
+output:
+
+    a    
+   aba   
+  abcba  
+ abcdcba 
+abcdedcba
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.Scanner;
+public class class17 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				if(i==0||i==n-1||j==0||j==n-1)
+				{
+					System.out.print("* ");
+				}
+				else if(i==1||i==n-2||j==1||j==n-2)
+				{
+					System.out.print("$ ");
+				}
+				else
+				{
+					System.out.print("  ");
+					
+				}
+			
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+
+output:
+
+5
+* * * * * 
+* $ $ $ * 
+* $   $ * 
+* $ $ $ * 
+* * * * * 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.Scanner;
+public class class17 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				if(i==0||i==n-1||j==0||j==n-1)
+				{
+					System.out.print(+n+" ");
+					
+				}
+				else if(i==1||i==n-2||j==1||j==n-2)
+				{
+					System.out.print(+(n-1)+" ");
+				}
+				else
+				{
+					System.out.print(+(n-2)+" ");
+					
+				}
+			
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+
+
+output:
+
+6
+6 6 6 6 6 6 
+6 5 5 5 5 6 
+6 5 4 4 5 6 
+6 5 4 4 5 6 
+6 5 5 5 5 6 
+6 6 6 6 6 6 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package sample01;
+import java.util.Scanner;
+public class class17 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int i=0;i<(n*2)-1;i++)
+		{
+			for(int j=0;j<(n*2)-1;j++)
+			{
+				if(i+j<((n*2)-1))
+				{
+					System.out.print(n-Math.min(i, j)+" ");
+				}
+				else
+				{
+					System.out.print(Math.max(i, j)-(n-2)+" ");
+				}
+			
+			
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+
+
+output:
+
+4
+4 4 4 4 4 4 4 
+4 3 3 3 3 3 4 
+4 3 2 2 2 3 4 
+4 3 2 1 2 3 4 
+4 3 2 2 2 3 4 
+4 3 3 3 3 3 4 
+4 4 4 4 4 4 4 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
